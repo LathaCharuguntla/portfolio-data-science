@@ -41,9 +41,9 @@
             background-color: #adaaaa3b;
         }
 
-        /* Image section */
-        .image-container {
-            flex-shrink: 0;
+
+            .image-container {
+                flex-shrink: 0;
             margin-left: 130px;
             margin-right: 50px;
             width: 250px;
@@ -54,7 +54,16 @@
             border-radius: 10px;
             border: 2px solid white;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
+                position: relative; /* Optional: For positioning child elements */
+                overflow: hidden; /* Ensures no content spills out */
+            }
+
+            .profile-photo {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the image covers the container */
+                object-position: center; /* Centers the image */
+            }
 
         /* Text content */
         .text-content header h2 {
@@ -404,7 +413,7 @@
             transform: translateY(-5px);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
-       
+
 
 
 
@@ -433,7 +442,9 @@
             <section id="header">
                 <div class="card" id="home">
                     <!-- Image Section -->
-                    <div class="image-container"></div>
+                    <div class="image-container">
+                        <img src="images/img1.PNG" alt="Your Name" class="profile-photo">
+                    </div>
                     
                     <!-- Text Content -->
                     <div class="text-content">
